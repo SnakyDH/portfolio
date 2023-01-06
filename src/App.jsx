@@ -1,12 +1,27 @@
+//React
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+//Utils
 import "./css/index.css";
+//Components
+import { Header } from "./Components/Header";
+import { SectionMe } from "./Components/SectionMe";
+import { SectionGoals } from "./Components/SectionGoals";
+import { SectionSkills } from "./Components/SectionSkills";
+import { SectionProjects } from "./Components/SectionProjects";
+import { SectionContact } from "./Components/SectionContact";
+import { Footer } from "./Components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <h1 className="text-3xl font-bold underline bg-green-600">Hello world!</h1>
+    <>
+      <Header />
+      <SectionMe />
+      <SectionSkills />
+      <SectionGoals />
+      <SectionProjects />
+      <SectionContact />
+      <Footer></Footer>
+    </>
   );
 }
 

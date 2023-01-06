@@ -1,4 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html{
+  scroll-behavior: smooth;
+}
+*:root {
+  padding: 0;
+  margin: 0;
+  --blue-section:#181781;
+  --brown-section:#653105;
+}
+.bg-blue-section {
+  background-color: var(--blue-section);
+}
+.bg-brown-section {
+  background-color: var(--brown-section);
+}
+body {
+  background-color: #363027;
+  /*background-color: #242525;*/
+}
