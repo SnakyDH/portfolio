@@ -3,19 +3,24 @@ import { ReactDOM } from "react-dom";
 function Header() {
   //const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const data = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Skills", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Contact", href: "#" },
+  const direction = [
+    { name: "Daniel García Romero", href: "#Home" },
+    { name: "Proyectos", href: "#Projects" },
+    { name: "Premios", href: "#Awards" },
+    { name: "Habilidades", href: "#Skills" },
+    { name: "Contacto", href: "#Contacts" },
     //todo add laboral experience
   ];
   return (
     <>
-      <header className={"bg-green-600 w-auto sticky top-0"}>
+      <header className={"bg-emerald-900 w-auto sticky top-0 z-10"}>
         <nav className={"flex items-end justify-between flex-wrap p-6"}>
-          <div className={"flex items-center flex-shrink-0 text-white mr-6"}>
+          <div
+            className={"flex items-center flex-shrink-0 text-white mr-6"}
+            onClick={() => {
+              location.href = direction[0].href;
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -66,14 +71,14 @@ function Header() {
                 "text-sm lg:flex-grow lg:flex lg:justify-center lg:gap-20"
               }
             >
-              {data.map((item) => {
+              {direction.map((item) => {
                 return (
                   <a
                     key={item.name}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     href={item.href}
                     className={
-                      "text-xl block mt-4 lg:inline-block lg:mt-0  rounded p-3 text-slate-200 font-extrabold hover:bg-slate-200 hover:text-green-900 mr-4"
+                      "text-xl block mt-4 lg:inline-block lg:mt-0  rounded p-3 text-slate-200 font-extrabold hover:bg-slate-200 hover:text-green-900 mr-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
                     }
                   >
                     {item.name}

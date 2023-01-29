@@ -7,16 +7,31 @@ html{
 *:root {
   padding: 0;
   margin: 0;
-  --blue-section:#181781;
+  /* 181781  
+  muy bueno 181757
+  #191845
+  */
+  --purple-section:#2d1b63;
+  --blue-section:#191845;
   --brown-section:#653105;
 }
 .bg-blue-section {
   background-color: var(--blue-section);
 }
+.bg-purple-section {
+  background-color: var(--purple-section);
+}
+.bg-beige{
+  background-color: #E1D6C4;
+}
 .bg-brown-section {
   background-color: var(--brown-section);
 }
-body {
-  background-color: #363027;
-  /*background-color: #242525;*/
+.bg-waves-green-desktop {
+  background-image: url("/waves-green.svg");
+  background-size: cover;
+}
+.bg-waves-green-mobile{
+  background-image: url("/waves-green-mobile.svg");
+  background-size: cover;
 }

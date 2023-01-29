@@ -5,7 +5,7 @@ import "./css/index.css";
 //Components
 import { Header } from "./Components/Header";
 import { SectionMe } from "./Components/SectionMe";
-import { SectionGoals } from "./Components/SectionGoals";
+import { SectionAwards } from "./Components/SectionAwards";
 import { SectionSkills } from "./Components/SectionSkills";
 import { SectionProjects } from "./Components/SectionProjects";
 import { SectionContact } from "./Components/SectionContact";
@@ -15,10 +15,15 @@ function App() {
   return (
     <>
       <Header />
+      <hr id="Home" className="invisible" />
       <SectionMe />
-      <SectionSkills />
-      <SectionGoals />
+      <hr id="Projects" className="py-10 invisible" />
       <SectionProjects />
+      <hr id="Awards" className="py-10 invisible" />
+      <SectionAwards />
+      <hr id="Skills" className="py-10 invisible" />
+      <SectionSkills />
+      <hr id="Contacts" className="py-10 invisible" />
       <SectionContact />
       <Footer></Footer>
     </>
