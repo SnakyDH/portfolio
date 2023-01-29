@@ -1,0 +1,126 @@
+const projects = [
+  {
+    id: 1,
+    title: "Reto de Autenticaciòn con NodeJS, MongoDB y ReactJS",
+    desc: "",
+    date: "2021-05-01",
+    imgUrl:
+      "https://preview.redd.it/d1pr6os48gf61.png?width=2560&format=png&auto=webp&s=02d620a7bd60cb42b4da6138f37473222c6adf4e",
+    repoUrl: "",
+    deployUrls: [
+      { type: "Frontend", url: "" },
+      { type: "Backend", url: "" },
+    ],
+    tecnologies: [
+      { name: "Node", imgUrl: "" },
+      { name: "Express", imgUrl: "" },
+      { name: "JWT", imgUrl: "" },
+      { name: "MongoDB", imgUrl: "" },
+      { name: "React", imgUrl: "" },
+      { name: "Tailwind", imgUrl: "" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Sistema de gestión de citas medicas Backend NodeJS",
+    desc: "",
+    date: "2021-05-01",
+    imgUrl: "https://images3.alphacoders.com/108/1081932.jpg",
+    repoUrl: "",
+    deployUrls: [
+      { type: "Frontend", url: "" },
+      { type: "Backend", url: "" },
+    ],
+    tecnologies: [
+      { name: "Node", imgUrl: "" },
+      { name: "Express", imgUrl: "" },
+      { name: "JWT", imgUrl: "" },
+      { name: "MongoDB", imgUrl: "" },
+      { name: "React", imgUrl: "" },
+      { name: "Tailwind", imgUrl: "" },
+    ],
+  },
+  {
+    id: 3,
+    title: "React Todo App con LocalStorage",
+    desc: "",
+    date: "2021-05-01",
+    imgUrl:
+      "https://whatifgaming.com/wp-content/uploads/2021/10/ExCharny-1024x576.jpg",
+    repoUrl: "",
+    deployUrls: [
+      { type: "Frontend", url: "" },
+      { type: "Backend", url: "" },
+    ],
+    tecnologies: [
+      { name: "Node", imgUrl: "" },
+      { name: "Express", imgUrl: "" },
+      { name: "JWT", imgUrl: "" },
+      { name: "MongoDB", imgUrl: "" },
+      { name: "React", imgUrl: "" },
+      { name: "Tailwind", imgUrl: "" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Chat Rick and Morty con Socket.io",
+    desc: "",
+    date: "2021-05-01",
+    imgUrl:
+      "https://c4.wallpaperflare.com/wallpaper/201/304/907/valorant-video-games-video-game-art-reyna-valorant-digital-hd-wallpaper-preview.jpg",
+    repoUrl: "",
+    deployUrls: [
+      { type: "Frontend", url: "" },
+      { type: "Backend", url: "" },
+    ],
+    tecnologies: [
+      { name: "Node", imgUrl: "" },
+      { name: "Express", imgUrl: "" },
+      { name: "JWT", imgUrl: "" },
+      { name: "MongoDB", imgUrl: "" },
+      { name: "React", imgUrl: "" },
+      { name: "Tailwind", imgUrl: "" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Graficos con ChartJS y data de la Universidad Distrital",
+    desc: "",
+    date: "2021-05-01",
+    imgUrl: "https://wallpaperaccess.com/full/5144437.jpg",
+    repoUrl: "",
+    deployUrls: [
+      { type: "Frontend", url: "" },
+      { type: "Backend", url: "" },
+    ],
+    tecnologies: [
+      { name: "Node", imgUrl: "" },
+      { name: "Express", imgUrl: "" },
+      { name: "JWT", imgUrl: "" },
+      { name: "MongoDB", imgUrl: "" },
+      { name: "React", imgUrl: "" },
+      { name: "Tailwind", imgUrl: "" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Explicación Metodo Matematico - Raices Multiples",
+    desc: "",
+    date: "2021-05-01",
+    imgUrl: "https://images7.alphacoders.com/108/thumb-1920-1081933.jpg",
+    repoUrl: "",
+    deployUrls: [
+      { type: "Frontend", url: "" },
+      { type: "Backend", url: "" },
+    ],
+    tecnologies: [
+      { name: "Node", imgUrl: "" },
+      { name: "Express", imgUrl: "" },
+      { name: "JWT", imgUrl: "" },
+      { name: "MongoDB", imgUrl: "" },
+      { name: "React", imgUrl: "" },
+      { name: "Tailwind", imgUrl: "" },
+    ],
+  },
+];
+export { projects };
