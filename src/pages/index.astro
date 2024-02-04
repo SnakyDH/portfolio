@@ -1,9 +1,37 @@
 ---
-import Header from '../components/header/Header.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Header from "../components/header/Header.astro";
+import SocialIcon from "../components/socialMedia/SocialIcon.astro";
+import Layout from "../layouts/Layout.astro";
+import LineIcon from "../components/shared/LineIcon.astro";
 ---
 
-<Layout title="Daniel Garcia Romero - Software Developer" >
-	<Header/>
+<Layout title="Daniel García Romero - Software Developer">
+  <Header />
+  <section class="h-screen flex justify-around items-center">
+    <div>
+      <img class="w-32" src="icon.svg" alt="hola" />
+    </div>
+    <div class="grid gap-5">
+      <h1 class="text-onPrimary text-center text-4xl font-extrabold">
+        Daniel García Romero
+      </h1>
+      <LineIcon />
+      <h2 class="text-onPrimary text-center text-3xl font-extrabold">
+        <span> Software</span>
+        <span class="text-primary"> Developer</span>
+      </h2>
+      <div class="flex gap-10 justify-center">
+        <SocialIcon
+          link="https://www.github.com/snakydh"
+          img="github.svg"
+          alt="GitHub Icon"
+        />
+        <SocialIcon
+          link="https://www.linkedin.com/in/dangarciadh/"
+          img="linkedin.svg"
+          alt="LinkedIn Icon"
+        />
+      </div>
+    </div>
+  </section>
 </Layout>
