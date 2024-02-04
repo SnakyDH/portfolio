@@ -8,6 +8,7 @@ export default {
       secondary: "#4828C9",
       onSecondary: "#FFFFFF",
       background: "#0A0822",
+      lime: "#EDFFA5",
     },
     extend: {},
   },
