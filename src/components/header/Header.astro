@@ -1,13 +1,17 @@
+---
+import Item from "./Item.astro";
+---
+
 <header class="bg-primary grid grid-cols-6 justify-evenly py-2">
   <section class="col-span-2 flex gap-10 text-onPrimary items-center justify-evenly">
       <img src="icon.svg" alt="logo" class="w-16">
     <span class="font-bold text-2xl">Daniel Garcia Romero</span>
   </section>
   <ul class="flex col-span-3 text-onPrimary justify-evenly items-center">
-    <li><a href="#">About Me</a></li>
-    <li><a href="#">Experience</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">Skills</a></li>
+    <Item title="About Me" ref="#"/>
+    <Item title="Experience" ref="#"/>
+    <Item title="Projects" ref="#"/>
+    <Item title="Skills" ref="#"/>
   </ul>
   <button class="bg-secondary rounded-3xl text-onSecondary">
     Download CV
