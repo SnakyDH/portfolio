@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Daniel Garcia Romero - Portafolio",
-  description: "Daniel Garcia Romero es un desarrollador de software de Bogotá, Colombia. Con experiencia en desarrollo web y móvil.",
+  description:
+    "Daniel Garcia Romero es un desarrollador de software de Bogotá, Colombia. Con experiencia en desarrollo web y móvil.",
 };
 
 export default function RootLayout({
@@ -16,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32" />
       <body className={inter.className}>{children}</body>
     </html>
   );
