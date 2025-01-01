@@ -1,0 +1,22 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@i18n/utils";
+
+import Nav from "@components/Nav.astro";
+import LangPicker from "@components/LangPicker.astro";
+import Base from "@layouts/Base.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Base>
+  <Nav />
+  <LangPicker />
+  <h1>
+    {t("nav.home")}
+  </h1>
+</Base>
