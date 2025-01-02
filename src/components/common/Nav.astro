@@ -1,0 +1,40 @@
+---
+import { getLang, useTranslations } from "@i18n/utils";
+import LangPicker from "./LangPicker.astro";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+---
+
+<nav
+  class="bg-bubble text-white p-4 flex gap-4 justify-between items-center border-4 border-secondary rounded-2xl my-2 max-w-3xl mx-auto"
+>
+  <ul class="flex gap-4">
+    <li>
+      <a href="">
+        {t("dev.name")}
+      </a>
+    </li>
+    <li>
+      <a href="">
+        {t("nav.about")}
+      </a>
+    </li>
+    <li>
+      <a href="">
+        {t("nav.experience")}
+      </a>
+    </li>
+    <li>
+      <a href="">
+        {t("nav.projects")}
+      </a>
+    </li>
+    <li>
+      <a href="">
+        {t("nav.skills")}
+      </a>
+    </li>
+  </ul>
+  <LangPicker />
+</nav>

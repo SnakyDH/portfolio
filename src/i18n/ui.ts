@@ -8,10 +8,24 @@ export const showDefaultLang = false;
 export const ui = {
   en: {
     "nav.home": "Home",
-    "nav.about": "About",
+    "nav.about": "About Me",
+    "nav.experience": "Experience",
+    "nav.projects": "Projects",
+    "nav.skills": "Skills",
+    // Developer information
+    "dev.name": "Daniel Garcia Romero",
+    // Skills Section
+    "skills.title": "Skills",
   },
   es: {
     "nav.home": "Inicio",
-    "nav.about": "Acerca de",
+    "nav.about": "Sobre mí",
+    "nav.experience": "Experiencia",
+    "nav.projects": "Proyectos",
+    "nav.skills": "Habilidades",
+    // Developer information
+    "dev.name": "Daniel García Romero",
+    // Skills section
+    "skills.title": "Habilidades",
   },
 } as const;

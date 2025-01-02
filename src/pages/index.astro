@@ -1,11 +1,14 @@
 ---
-import LangPicker from "@components/LangPicker.astro";
-import Nav from "@components/Nav.astro";
+import Nav from "@components/common/Nav.astro";
 import Base from "@layouts/Base.astro";
+import { useTranslations, getLang } from "@i18n/utils";
+import Skills from "@components/sections/skills/skills.astro";
+const lang = getLang(Astro.url);
+
+const t = useTranslations(lang);
 ---
 
 <Base>
   <Nav />
-  <LangPicker />
-  <h1>Hello World</h1>
+  <Skills />
 </Base>
