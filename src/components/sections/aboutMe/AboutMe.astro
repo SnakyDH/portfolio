@@ -1,0 +1,18 @@
+---
+import { useTranslations, getLang } from "@i18n/utils";
+import SectionLayout from "@layouts/sectionLayout.astro";
+import Linkedin from "@assets/social/linkedin.svg";
+import GitHub from "@assets/social/github.svg";
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+---
+
+<SectionLayout title={t("dev.name")}>
+  <h2>{t("dev.title.frontend")}</h2>
+  <h2>{t("dev.title.fullstack")}</h2>
+  <h2>{t("dev.title.mobile")}</h2>
+  <div class="flex items-center justify-center gap-4">
+    <img src={Linkedin.src} alt={Linkedin.name} height="48" width="48" />
+    <img src={GitHub.src} alt={GitHub.name} height="48" width="48" />
+  </div>
+</SectionLayout>

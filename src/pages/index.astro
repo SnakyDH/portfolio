@@ -1,8 +1,9 @@
 ---
 import Nav from "@components/common/Nav.astro";
 import Base from "@layouts/Base.astro";
+import Skills from "@components/sections/skills/Skills.astro";
+import AboutMe from "@components/sections/aboutMe/AboutMe.astro";
 import { useTranslations, getLang } from "@i18n/utils";
-import Skills from "@components/sections/skills/skills.astro";
 const lang = getLang(Astro.url);
 
 const t = useTranslations(lang);
@@ -10,5 +11,6 @@ const t = useTranslations(lang);
 
 <Base>
   <Nav />
+  <AboutMe />
   <Skills />
 </Base>
