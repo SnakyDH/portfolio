@@ -13,6 +13,9 @@ export const ui = {
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.skills": "Skills",
+    // CV
+    "cv.link": "https://github.com/SnakyDH",
+    "cv.name": "Daniel Garcia Romero - Curriculum Vitae",
     // Developer information
     "dev.name": "Daniel Garcia Romero",
     "dev.title.frontend": "Frontend Developer",
@@ -30,6 +33,9 @@ export const ui = {
     "nav.experience": "Experiencia",
     "nav.projects": "Proyectos",
     "nav.skills": "Habilidades",
+    // CV
+    "cv.link": "https://www.linkedin.com/in/dangarciadh/",
+    "cv.name": "Daniel García Romero - Hoja de vida",
     // Developer information
     "dev.name": "Daniel García Romero",
     "dev.title.frontend": "Desarrollador Frontend",

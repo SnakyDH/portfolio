@@ -8,6 +8,7 @@ export default {
       surface: "#0A0822",
       surfaceLight: "#15123b",
       onSurface: "#FFFFFF",
+      lime: "#EDFFA5",
     },
     extend: {},
   },

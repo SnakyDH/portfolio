@@ -1,18 +1,67 @@
 ---
 import { useTranslations, getLang } from "@i18n/utils";
 import SectionLayout from "@layouts/sectionLayout.astro";
+import { sections } from "@components/sections/sections";
 import Linkedin from "@assets/social/linkedin.svg";
 import GitHub from "@assets/social/github.svg";
+import Download from "@assets/download.svg";
+import HeaderDivider from "@components/common/HeaderDivider.astro";
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
+
+interface AboutMeSocialMedia {
+  name: string;
+  link: string;
+  img: string;
+}
+
+const aboutMeSocialInfo: Array<AboutMeSocialMedia> = [
+  {
+    name: "GitHub",
+    link: "https://github.com/SnakyDH",
+    img: GitHub.src,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/dangarciadh/",
+    img: Linkedin.src,
+  },
+];
+const devRole = t("dev.title.frontend");
 ---
 
-<SectionLayout title={t("dev.name")}>
-  <h2>{t("dev.title.frontend")}</h2>
-  <h2>{t("dev.title.fullstack")}</h2>
-  <h2>{t("dev.title.mobile")}</h2>
-  <div class="flex items-center justify-center gap-4">
-    <img src={Linkedin.src} alt={Linkedin.name} height="48" width="48" />
-    <img src={GitHub.src} alt={GitHub.name} height="48" width="48" />
-  </div>
+<SectionLayout id={sections.aboutMe}>
+  <main class="grid grid-cols-5 items-center gap-4">
+    <img
+      src={GitHub.src}
+      alt={t("dev.name")}
+      class="col-start-2"
+      height="400"
+      width="400"
+    />
+    <div class="flex flex-col col-start-4 gap-4 items-center">
+      <h1
+        id="dev-name"
+        class="text-4xl text-center font-bold text-gray-800 dark:text-gray-200"
+      >
+        {t("dev.name")}
+      </h1>
+      <HeaderDivider />
+      <h2 class="text-3xl text-center">{devRole}</h2>
+      <div class="my-4 flex flex-col items-center">
+        <div class="flex items-center justify-center gap-6">
+          {
+            aboutMeSocialInfo.map((info) => (
+              <a href={info.link} target="_blank" rel="noopener noreferrer">
+                <img src={info.img} alt={info.name} height="48" width="48" />
+              </a>
+            ))
+          }
+        </div>
+        <a href={t("cv.link")} target="_blank" rel="noopener noreferrer">
+          <img src={Download.src} alt={t("cv.name")} height="64" width="64" />
+        </a>
+      </div>
+    </div>
+  </main>
 </SectionLayout>

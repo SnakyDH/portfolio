@@ -1,37 +1,38 @@
 ---
 import { getLang, useTranslations } from "@i18n/utils";
 import LangPicker from "./LangPicker.astro";
+import { sections } from "@components/sections/sections";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <nav
-  class="bg-bubble text-white p-4 flex gap-4 justify-between items-center border-4 border-secondary rounded-2xl my-2 max-w-3xl mx-auto"
+  class="bg-bubble text-white p-4 flex gap-4 justify-between items-center border-4 border-secondary rounded-2xl my-2"
 >
   <ul class="flex gap-4">
     <li>
-      <a href="">
+      <a href={`#`}>
         {t("dev.name")}
       </a>
     </li>
     <li>
-      <a href="">
+      <a href={`#${sections.aboutMe}`}>
         {t("nav.about")}
       </a>
     </li>
     <li>
-      <a href="">
+      <a href={`#${sections.experience}`}>
         {t("nav.experience")}
       </a>
     </li>
     <li>
-      <a href="">
+      <a href={`#${sections.projects}`}>
         {t("nav.projects")}
       </a>
     </li>
     <li>
-      <a href="">
+      <a href={`#${sections.skills}`}>
         {t("nav.skills")}
       </a>
     </li>

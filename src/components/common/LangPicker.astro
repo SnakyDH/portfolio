@@ -4,11 +4,11 @@ import { getLang, useTranslatedPath } from "@i18n/utils";
 import Spanish from "@assets/langs/spanish.svg";
 import English from "@assets/langs/english.svg";
 
-const lang = getLang(Astro.url);
-const translatePath = useTranslatedPath(lang);
+const language = getLang(Astro.url);
+const translatePath = useTranslatedPath(language);
 ---
 
-<ul class="flex gap-4">
+<ul class="flex gap-4 items-center">
   {
     Object.entries(languages).map(([lang, label]) => (
       <li>
@@ -16,8 +16,8 @@ const translatePath = useTranslatedPath(lang);
           <img
             src={lang == "en" ? English.src : Spanish.src}
             alt={label}
-            height="34"
-            width="34"
+            height={lang == language ? "44" : "34"}
+            width={lang == language ? "44" : "34"}
           />
         </a>
       </li>
