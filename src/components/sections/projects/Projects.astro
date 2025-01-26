@@ -1,7 +1,85 @@
 ---
 import SectionLayout from "@layouts/SectionLayout.astro";
+import { sections } from "@components/sections/sections";
+import ProjectCard from "./ProjectCard.astro";
+import { ProjectId, projects } from "./projects.ts";
 ---
 
-<SectionLayout title="Projects">
-  <div></div>
+<SectionLayout title="Projects" id={sections.projects}>
+  <div
+    class="grid sm:grid-cols-2 sm:grid-rows-3 w-full min-h-96 grid-cols-1 grid-rows-5 gap-4"
+  >
+    {
+      projects.map((project) =>
+        project.id === ProjectId.programmingClass ? (
+          <div class={project.style}>
+            <ProjectCard
+              title={project.title}
+              subtitle={project.subtitle}
+              image={project.image}
+              platforms={project.platforms}
+            />
+          </div>
+        ) : (
+          <ProjectCard
+            class:list={project.style}
+            title={project.title}
+            subtitle={project.subtitle}
+            image={project.image}
+            platforms={project.platforms}
+            style={project.style}
+          />
+        )
+      )
+    }
+  </div>
+  <div class="h-20 py-10 bg-primary"></div>
+  <div
+    class="grid sm:grid-cols-2 sm:grid-rows-3 w-full min-h-96 grid-cols-1 grid-rows-5 gap-4"
+  >
+    <div class="row-span-2">
+      <ProjectCard
+        title={projects[0].title}
+        subtitle={projects[0].subtitle}
+        image={projects[0].image}
+        platforms={projects[0].platforms}
+      />
+    </div>
+    <div
+      class="grid
+      grid-cols-2
+      grid-rows-1
+      gap-4
+      row-span-1"
+    >
+      <ProjectCard
+        title={projects[1].title}
+        subtitle={projects[1].subtitle}
+        image={projects[1].image}
+        platforms={projects[1].platforms}
+      />
+      <div class="grid">
+        <ProjectCard
+          title={projects[2].title}
+          subtitle={projects[2].subtitle}
+          image={projects[2].image}
+          platforms={projects[2].platforms}
+        />
+      </div>
+    </div>
+    <div class="row-span-2">
+      <ProjectCard
+        title={projects[3].title}
+        subtitle={projects[3].subtitle}
+        image={projects[3].image}
+        platforms={projects[3].platforms}
+      />
+    </div>
+    <ProjectCard
+      title={projects[4].title}
+      subtitle={projects[4].subtitle}
+      image={projects[4].image}
+      platforms={projects[4].platforms}
+    />
+  </div>
 </SectionLayout>

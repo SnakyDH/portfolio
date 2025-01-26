@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 ---
 
 <SectionLayout title={t("skills.title")} id={sections.skills}>
-  <div class="grid grid-cols-5 gap-10">
+  <div class="container">
     {
       skills.map((skill) => (
         <div class="flex items-center justify-center hover:bg-surfaceLight p-2 rounded-2xl">
@@ -19,3 +19,11 @@ const t = useTranslations(lang);
     }
   </div>
 </SectionLayout>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+</style>
